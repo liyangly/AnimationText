@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "HomePageViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,8 +18,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self setRootViewController];
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)navigateionbarstyle {
+    
+}
+
+- (void)setRootViewController {
+    
+    UIViewController *rootVC = [[UINavigationController alloc] initWithRootViewController:[HomePageViewController new]];
+    self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

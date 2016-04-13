@@ -37,6 +37,7 @@
 @implementation HomePageViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     self.title = @"动画效果";
     self.view.backgroundColor = [UIColor whiteColor];
@@ -47,7 +48,7 @@
 
 - (void)initSubViews {
     
-    swipeview = [[BaseSwipeView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-128)];
+    swipeview = [[BaseSwipeView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
     baseanimationview = [[BaseAnimationView alloc] init];
     keyframeanimationview = [[KeyframeAnimationView alloc] init];
     animationgroupview = [[AnimationGroupView alloc] init];

@@ -43,7 +43,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self initSubViews];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)initSubViews {

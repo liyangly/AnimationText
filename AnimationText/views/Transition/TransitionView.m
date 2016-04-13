@@ -8,7 +8,16 @@
 
 #import "TransitionView.h"
 
-@implementation TransitionView
+#import "AnimationTextAPI.h"
+
+#import "UIColor+Util.h"
+
+#import "Masonry.h"
+#import "BFPaperButton.h"
+
+@implementation TransitionView {
+    UIView *demoView;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -22,10 +31,19 @@
 
 - (void)initSubViews {
     
-}
-
-- (void)setLayOut {
+    demoView = [[UIView alloc] initWithFrame:CGRectMake(ScreenSize.width/2 - 50, ScreenSize.height/2 - 75, 100, 100)];
+    [self addSubview:demoView];
+    
+    float offsetX,offsetY;
+    NSArray *nameArray = @[@"fade",@"movein",@"push",@"reveal",@"club",@"suck",@"oglflip",@"ripple",@"curl",@"uncurl",@"caopen",@"caclose"];
+    for (int i=0; i<12; i++) {
+        
+        offsetX = 5 + ((ScreenSize.width - 40)/4 + 10) * i;
+        
+    }
     
 }
+
+
 
 @end

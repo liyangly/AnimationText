@@ -8,7 +8,14 @@
 
 #import "AppDelegate.h"
 
+#import "UIImage+Util.h"
+
 #import "HomePageViewController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
+#import "BaseViewController.h"
+
+#import "SWRevealViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +26,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [self setRootViewController];
+    [self customizeInterface];
+    [self setRootViewController2];
+    
     // Override point for customization after application launch.
     return YES;
 }
 
-- (void)navigateionbarstyle {
+//设置导航栏
+- (void)customizeInterface {
+    
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    UIImage *backgroundImage = nil;
+    NSDictionary *textAttributes = nil;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat navHeight = 64.0;
+    CGSize  imageSize = CGSizeMake(screenWidth, navHeight);
+    UIImage *image = [UIImage imageNamed:@"navHead.png"];
+    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
+        
+        backgroundImage = [UIImage scaleToSize:image size:imageSize];
+        
+        textAttributes = @{
+                           NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
+                           NSForegroundColorAttributeName: [UIColor whiteColor],
+                           };
+    } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+        backgroundImage = [UIImage scaleToSize:image size:imageSize];
+        
+        textAttributes = @{
+                           UITextAttributeFont: [UIFont boldSystemFontOfSize:18],
+                           UITextAttributeTextColor: [UIColor whiteColor],
+                           UITextAttributeTextShadowColor: [UIColor clearColor],
+                           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetZero],
+                           };
+#endif
+    }
+    
+//    [navigationBarAppearance setBackgroundImage:backgroundImage
+//                                  forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setBackgroundColor:[UIColor cyanColor]];
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
+    navigationBarAppearance.tintColor = [UIColor whiteColor];
     
 }
 
@@ -32,6 +76,26 @@
     
     UIViewController *rootVC = [[UINavigationController alloc] initWithRootViewController:[HomePageViewController new]];
     self.window.rootViewController = rootVC;
+    [self.window makeKeyAndVisible];
+}
+
+- (void)setRootViewController2 {
+    
+    LeftViewController *leftVC = [[LeftViewController alloc] init];
+    BaseViewController *centerVC = [[BaseViewController alloc] init];
+    RightViewController *rightVC = [[RightViewController alloc] init];
+    
+    UINavigationController *navcenterVC = [[UINavigationController alloc] initWithRootViewController:centerVC];
+    
+    SWRevealViewController *revealviewcontroller = [[SWRevealViewController alloc] initWithRearViewController:leftVC frontViewController:navcenterVC];
+    revealviewcontroller.rightViewController = rightVC;
+    //浮动层离左边距的宽度
+    revealviewcontroller.rearViewRevealWidth = 200;
+    //是否让浮动层弹回原位
+    [revealviewcontroller setFrontViewPosition:FrontViewPositionLeft animated:YES];
+    
+    self.window.rootViewController = revealviewcontroller;
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }
 

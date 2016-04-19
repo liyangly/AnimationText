@@ -95,10 +95,10 @@
             [self rippleAnimation];
             break;
         case 8:
-            [self CurlAnimtion];
+            [self pageCurlAnimtion];
             break;
         case 9:
-            [self UnCurlAnimation];
+            [self pageUnCurlAnimation];
             break;
         case 10:
             [self caOpenAnimation];
@@ -174,10 +174,10 @@
     [self changeView:YES];
     
     CATransition *anim = [CATransition animation];
-    anim.type = @"suck";
+    anim.type = @"suckEffect";
     anim.subtype = kCATransitionFromRight;
     anim.duration = 1.0;
-    [demoView.layer addAnimation:anim forKey:@"suckAnimation"];
+    [demoView.layer addAnimation:anim forKey:@"suckEffectAnimation"];
 }
 
 - (void)oglFlipAnimation {
@@ -193,22 +193,58 @@
 
 - (void)rippleAnimation {
     
+    [self changeView:YES];
+    
+    CATransition *anim = [CATransition animation];
+    anim.type = @"ripple";
+    anim.subtype = kCATransitionFromRight;
+    anim.duration = 1.0;
+    [demoView.layer addAnimation:anim forKey:@"rippleAnimation"];
 }
 
-- (void)CurlAnimtion {
+- (void)pageCurlAnimtion {
     
+    [self changeView:YES];
+    
+    CATransition *anim = [CATransition animation];
+    anim.type = @"pageCurl";
+    anim.subtype = kCATransitionFromRight;
+    anim.duration = 1.0;
+    [demoView.layer addAnimation:anim forKey:@"pageCurlAnimation"];
 }
 
-- (void)UnCurlAnimation {
+- (void)pageUnCurlAnimation {
     
+    [self changeView:YES];
+    
+    CATransition *anim = [CATransition animation];
+    anim.type = @"pageUnCurl";
+    anim.subtype = kCATransitionFromRight;
+    anim.duration = 1.0;
+    [demoView.layer addAnimation:anim forKey:@"pageUnCurlAnimation"];
 }
 
 - (void)caOpenAnimation {
+    
+    [self changeView:YES];
+    
+    CATransition *anim = [CATransition animation];
+    anim.type = @"cameraIrisHollowOpen";
+    anim.subtype = kCATransitionFromRight;
+    anim.duration = 1.0;
+    [demoView.layer addAnimation:anim forKey:@"cameraIrisHollowOpenAnimation"];
     
 }
 
 - (void)caCloseAnimation {
     
+    [self changeView:YES];
+    
+    CATransition *anim = [CATransition animation];
+    anim.type = @"cameraIrisHollowClose";
+    anim.subtype = kCATransitionFromRight;
+    anim.duration = 1.0;
+    [demoView.layer addAnimation:anim forKey:@"cameraIrisHollowCloseAnimation"];
 }
 
 - (void)changeView:(BOOL)isUp {

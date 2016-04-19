@@ -13,9 +13,7 @@
 #import "KeyframeAnimationView.h"
 #import "AnimationGroupView.h"
 #import "TransitionView.h"
-#import "PathMenuView.h"
-#import "NailMenuView.h"
-#import "PraiseView.h"
+#import "ComprehensiveView.h"
 
 #import "UIColor+Util.h"
 
@@ -27,9 +25,8 @@
     KeyframeAnimationView *keyframeanimationview;
     AnimationGroupView *animationgroupview;
     TransitionView *transitionview;
-    PathMenuView *pathmenuview;
-    NailMenuView *nailmenuview;
-    PraiseView *praiseview;
+    ComprehensiveView *comprehensiveView;
+    
 }
 
 @end
@@ -48,28 +45,22 @@
 
 - (void)initSubViews {
     
-    swipeview = [[BaseSwipeView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
+    swipeview = [[BaseSwipeView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64-20)];
     baseanimationview = [[BaseAnimationView alloc] init];
     keyframeanimationview = [[KeyframeAnimationView alloc] init];
     animationgroupview = [[AnimationGroupView alloc] init];
     transitionview = [[TransitionView alloc] init];
-    pathmenuview = [[PathMenuView alloc] init];
-    nailmenuview = [[NailMenuView alloc] init];
-    praiseview = [[PraiseView alloc] init];
+    comprehensiveView = [[ComprehensiveView alloc] init];
     NSArray *nameArray = @[@"基础动画",
                            @"关键帧动画",
                            @"组动画",
                            @"过渡动画",
-                           @"仿path菜单效果",
-                           @"仿丁丁菜单效果",
-                           @"点赞烟花效果"];
+                           @"综合动画"];
     NSArray *viewArray = @[baseanimationview,
                            keyframeanimationview,
                            animationgroupview,
                            transitionview,
-                           pathmenuview,
-                           nailmenuview,
-                           praiseview];
+                           comprehensiveView];
     [swipeview setItemNames:nameArray andView:viewArray];
     [self.view addSubview:swipeview];
 }
@@ -78,7 +69,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 

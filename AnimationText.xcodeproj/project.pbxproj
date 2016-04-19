@@ -41,10 +41,18 @@
 		B63FC64B1CBCF5E00012BC85 /* PraiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FC64A1CBCF5E00012BC85 /* PraiseView.m */; };
 		B63FC64E1CBCF5FC0012BC85 /* NailMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FC64D1CBCF5FC0012BC85 /* NailMenuView.m */; };
 		B63FC6511CBCF6180012BC85 /* PathMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FC6501CBCF6180012BC85 /* PathMenuView.m */; };
+		B65781741CC5BE0F00FFC933 /* ComprehensiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B65781731CC5BE0F00FFC933 /* ComprehensiveView.m */; };
+		B681EA821CC626E5002D65BC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B681EA811CC626E5002D65BC /* BaseViewController.m */; };
+		B681EA851CC62B79002D65BC /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B681EA841CC62B79002D65BC /* LeftViewController.m */; };
+		B681EA881CC62B8F002D65BC /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B681EA871CC62B8F002D65BC /* RightViewController.m */; };
 		B69574061CBCCE9F00019106 /* BaseAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B69574051CBCCE9F00019106 /* BaseAnimationView.m */; };
 		B69574091CBCCEB400019106 /* TransitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B69574081CBCCEB400019106 /* TransitionView.m */; };
 		B695740C1CBCCED100019106 /* KeyframeAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B695740B1CBCCED100019106 /* KeyframeAnimationView.m */; };
 		B695740F1CBCCEE400019106 /* AnimationGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = B695740E1CBCCEE400019106 /* AnimationGroupView.m */; };
+		B6C7723C1CC63586008EF47F /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C7723B1CC63586008EF47F /* UIImage+Util.m */; };
+		B6C772401CC63852008EF47F /* LeftTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C7723F1CC63852008EF47F /* LeftTableView.m */; };
+		B6C772471CC6389C008EF47F /* LeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C772461CC6389C008EF47F /* LeftCell.m */; };
+		B6C772491CC638B3008EF47F /* LeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C772481CC638B3008EF47F /* LeftCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +122,14 @@
 		B63FC64D1CBCF5FC0012BC85 /* NailMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NailMenuView.m; sourceTree = "<group>"; };
 		B63FC64F1CBCF6180012BC85 /* PathMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathMenuView.h; sourceTree = "<group>"; };
 		B63FC6501CBCF6180012BC85 /* PathMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathMenuView.m; sourceTree = "<group>"; };
+		B65781721CC5BE0F00FFC933 /* ComprehensiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComprehensiveView.h; sourceTree = "<group>"; };
+		B65781731CC5BE0F00FFC933 /* ComprehensiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComprehensiveView.m; sourceTree = "<group>"; };
+		B681EA801CC626E5002D65BC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		B681EA811CC626E5002D65BC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B681EA831CC62B79002D65BC /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		B681EA841CC62B79002D65BC /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		B681EA861CC62B8F002D65BC /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		B681EA871CC62B8F002D65BC /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 		B69574041CBCCE9F00019106 /* BaseAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimationView.h; sourceTree = "<group>"; };
 		B69574051CBCCE9F00019106 /* BaseAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimationView.m; sourceTree = "<group>"; };
 		B69574071CBCCEB400019106 /* TransitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionView.h; sourceTree = "<group>"; };
@@ -122,6 +138,13 @@
 		B695740B1CBCCED100019106 /* KeyframeAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyframeAnimationView.m; sourceTree = "<group>"; };
 		B695740D1CBCCEE400019106 /* AnimationGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationGroupView.h; sourceTree = "<group>"; };
 		B695740E1CBCCEE400019106 /* AnimationGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationGroupView.m; sourceTree = "<group>"; };
+		B6C7723A1CC63586008EF47F /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
+		B6C7723B1CC63586008EF47F /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
+		B6C7723E1CC63852008EF47F /* LeftTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableView.h; sourceTree = "<group>"; };
+		B6C7723F1CC63852008EF47F /* LeftTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableView.m; sourceTree = "<group>"; };
+		B6C772451CC6389C008EF47F /* LeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftCell.h; sourceTree = "<group>"; };
+		B6C772461CC6389C008EF47F /* LeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftCell.m; sourceTree = "<group>"; };
+		B6C772481CC638B3008EF47F /* LeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftCell.xib; sourceTree = "<group>"; };
 		CCCCFA143774C91A3D88D217 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC84F5ED3AC2A0141BA41014 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,6 +212,7 @@
 				B63FC61F1CBCE0EF0012BC85 /* image */,
 				B62C6DB21CBCA4CA009FFA0B /* category */,
 				B62C6DA21CBCA228009FFA0B /* views */,
+				B62C6DAE1CBCA3C3009FFA0B /* factory */,
 				B62C6D9E1CBC99AF009FFA0B /* application */,
 				B62C6D961CBC96B0009FFA0B /* viewcontrollers */,
 				B62C6D621CBBAECB009FFA0B /* ViewController.h */,
@@ -233,6 +257,12 @@
 			children = (
 				B62C6DAA1CBCA272009FFA0B /* HomePageViewController.h */,
 				B62C6DAB1CBCA272009FFA0B /* HomePageViewController.m */,
+				B681EA801CC626E5002D65BC /* BaseViewController.h */,
+				B681EA811CC626E5002D65BC /* BaseViewController.m */,
+				B681EA831CC62B79002D65BC /* LeftViewController.h */,
+				B681EA841CC62B79002D65BC /* LeftViewController.m */,
+				B681EA861CC62B8F002D65BC /* RightViewController.h */,
+				B681EA871CC62B8F002D65BC /* RightViewController.m */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -250,7 +280,9 @@
 		B62C6DA21CBCA228009FFA0B /* views */ = {
 			isa = PBXGroup;
 			children = (
-				B62C6DAE1CBCA3C3009FFA0B /* factory */,
+				B6C772441CC63887008EF47F /* cell */,
+				B6C7723D1CC6382F008EF47F /* tableview */,
+				B65781711CC5BDF000FFC933 /* Comprehensive */,
 				B63FC6481CBCF5CF0012BC85 /* Praise */,
 				B63FC6471CBCF5AC0012BC85 /* NailMenu */,
 				B63FC6461CBCF58A0012BC85 /* PathMenu */,
@@ -304,7 +336,8 @@
 				B62C6DAF1CBCA408009FFA0B /* BaseSwipeView.h */,
 				B62C6DB01CBCA408009FFA0B /* BaseSwipeView.m */,
 			);
-			path = factory;
+			name = factory;
+			path = views/factory;
 			sourceTree = "<group>";
 		};
 		B62C6DB21CBCA4CA009FFA0B /* category */ = {
@@ -312,6 +345,8 @@
 			children = (
 				B62C6DB31CBCA4FD009FFA0B /* UIColor+Util.h */,
 				B62C6DB41CBCA4FD009FFA0B /* UIColor+Util.m */,
+				B6C7723A1CC63586008EF47F /* UIImage+Util.h */,
+				B6C7723B1CC63586008EF47F /* UIImage+Util.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -367,6 +402,34 @@
 				B63FC64A1CBCF5E00012BC85 /* PraiseView.m */,
 			);
 			path = Praise;
+			sourceTree = "<group>";
+		};
+		B65781711CC5BDF000FFC933 /* Comprehensive */ = {
+			isa = PBXGroup;
+			children = (
+				B65781721CC5BE0F00FFC933 /* ComprehensiveView.h */,
+				B65781731CC5BE0F00FFC933 /* ComprehensiveView.m */,
+			);
+			path = Comprehensive;
+			sourceTree = "<group>";
+		};
+		B6C7723D1CC6382F008EF47F /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				B6C7723E1CC63852008EF47F /* LeftTableView.h */,
+				B6C7723F1CC63852008EF47F /* LeftTableView.m */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		B6C772441CC63887008EF47F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B6C772451CC6389C008EF47F /* LeftCell.h */,
+				B6C772461CC6389C008EF47F /* LeftCell.m */,
+				B6C772481CC638B3008EF47F /* LeftCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		E990D733AC91A02FADA3175B /* Frameworks */ = {
@@ -489,6 +552,7 @@
 				B62C6D6C1CBBAECB009FFA0B /* LaunchScreen.storyboard in Resources */,
 				B63FC63F1CBCE0EF0012BC85 /* chooser-moment-icon-sleep-highlighted@2x.png in Resources */,
 				B62C6D691CBBAECB009FFA0B /* Assets.xcassets in Resources */,
+				B6C772491CC638B3008EF47F /* LeftCell.xib in Resources */,
 				B63FC63B1CBCE0EF0012BC85 /* chooser-moment-icon-music-highlighted@2x.png in Resources */,
 				B63FC6381CBCE0EF0012BC85 /* chooser-moment-button@2x.png in Resources */,
 				B63FC6391CBCE0EF0012BC85 /* chooser-moment-icon-camera-highlighted@2x.png in Resources */,
@@ -577,7 +641,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C772471CC6389C008EF47F /* LeftCell.m in Sources */,
 				B62C6DA11CBC99CE009FFA0B /* AppDelegate.m in Sources */,
+				B681EA821CC626E5002D65BC /* BaseViewController.m in Sources */,
 				B69574091CBCCEB400019106 /* TransitionView.m in Sources */,
 				B62C6DB51CBCA4FD009FFA0B /* UIColor+Util.m in Sources */,
 				B69574061CBCCE9F00019106 /* BaseAnimationView.m in Sources */,
@@ -585,9 +651,14 @@
 				B63FC6511CBCF6180012BC85 /* PathMenuView.m in Sources */,
 				B695740C1CBCCED100019106 /* KeyframeAnimationView.m in Sources */,
 				B62C6DAC1CBCA272009FFA0B /* HomePageViewController.m in Sources */,
+				B681EA881CC62B8F002D65BC /* RightViewController.m in Sources */,
+				B681EA851CC62B79002D65BC /* LeftViewController.m in Sources */,
+				B6C7723C1CC63586008EF47F /* UIImage+Util.m in Sources */,
 				B63FC64B1CBCF5E00012BC85 /* PraiseView.m in Sources */,
+				B65781741CC5BE0F00FFC933 /* ComprehensiveView.m in Sources */,
 				B62C6DB11CBCA408009FFA0B /* BaseSwipeView.m in Sources */,
 				B63FC64E1CBCF5FC0012BC85 /* NailMenuView.m in Sources */,
+				B6C772401CC63852008EF47F /* LeftTableView.m in Sources */,
 				B62C6D5E1CBBAECB009FFA0B /* main.m in Sources */,
 				B695740F1CBCCEE400019106 /* AnimationGroupView.m in Sources */,
 			);

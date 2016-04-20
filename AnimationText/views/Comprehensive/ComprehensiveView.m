@@ -45,10 +45,6 @@
 
 - (void)initSubViews {
     
-//    view = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
-//    view.backgroundColor = [UIColor lightGrayColor];
-//    [self addSubview:view];
-    
     NSArray *nameArray = @[@"path",@"钉钉",@"点赞"];
     for (int i=0; i<nameArray.count; i++) {
         

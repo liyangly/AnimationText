@@ -31,7 +31,7 @@
 
 - (void)initSubViews {
     
-    demoview = [[UIView alloc] initWithFrame:CGRectMake(ScreenSize.width/2 - 50, ScreenSize.height/2 - 100-44, 100, 100)];
+    demoview = [[UIView alloc] initWithFrame:CGRectMake(SelfFrameSizeWidth/2 - 50, SelfFrameSizeHeight/2 - 100-44, 100, 100)];
     [self addSubview:demoview];
     demoview.backgroundColor = [UIColor themeColor];
     
@@ -39,14 +39,14 @@
     for (int i=0; i < 3; i++) {
         
         float offsetX,offsetY;
-        offsetX = (((ScreenSize.width - 40)/3 + 10) * i) + 5;
+        offsetX = (((SelfFrameSizeWidth - 40)/3 + 10) * i) + 5;
         offsetY = -10;
         BFPaperButton *btn = [[BFPaperButton alloc] init];
         [self addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(self.mas_bottom).offset(offsetY);
             make.left.mas_equalTo(self.mas_left).offset(offsetX);
-            make.width.mas_equalTo((ScreenSize.width - 30)/3);
+            make.width.mas_equalTo((SelfFrameSizeWidth - 30)/3);
             make.height.mas_equalTo(20);
         }];
         [btn setTitle:nameArray[i] forState:UIControlStateNormal];
@@ -78,9 +78,9 @@
 - (void)keyframeAnimation {
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    NSValue *value0 = [NSValue valueWithCGPoint:CGPointMake(0, ScreenSize.width/2 - 50)];
-    NSValue *value1 = [NSValue valueWithCGPoint:CGPointMake(100, ScreenSize.width/2 - 50)];
-    NSValue *value2 = [NSValue valueWithCGPoint:CGPointMake(100, ScreenSize.width/2)];
+    NSValue *value0 = [NSValue valueWithCGPoint:CGPointMake(0, SelfFrameSizeWidth/2 - 50)];
+    NSValue *value1 = [NSValue valueWithCGPoint:CGPointMake(100, SelfFrameSizeWidth/2 - 50)];
+    NSValue *value2 = [NSValue valueWithCGPoint:CGPointMake(100, SelfFrameSizeWidth/2)];
     animation.values = [NSArray arrayWithObjects:value0,value1,value2, nil];
     animation.duration = 3.0;
     animation.delegate = self;//监听动画的开始和结束
@@ -100,7 +100,7 @@
 - (void)pathAnimation {
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 100, ScreenSize.width, 200)];
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 100, SelfFrameSizeWidth, 200)];
     animation.path = path.CGPath;
     animation.duration = 2.0;
     

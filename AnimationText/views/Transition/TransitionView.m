@@ -34,7 +34,7 @@
 
 - (void)initSubViews {
     
-    demoView = [[UIView alloc] initWithFrame:CGRectMake(ScreenSize.width/2 - 50, ScreenSize.height/2 - 144, 100, 100)];
+    demoView = [[UIView alloc] initWithFrame:CGRectMake(SelfFrameSizeWidth/2 - 50, SelfFrameSizeHeight/2 - 144, 100, 100)];
     [self addSubview:demoView];
     demoView.backgroundColor = [UIColor themeColor];
     
@@ -46,7 +46,7 @@
     NSArray *nameArray = @[@"fade",@"moveIn",@"push",@"reveal",@"cube",@"suck",@"oglFlip",@"ripple",@"Curl",@"UnCurl",@"caOpen",@"caClose"];
     for (int i=0; i<12; i++) {
         
-        offsetX = 5 + ((ScreenSize.width - 40)/4 + 10) * (i%4);
+        offsetX = 5 + ((SelfFrameSizeWidth - 40)/4 + 10) * (i%4);
         offsetY = (i/4) * 30;
         
         BFPaperButton *btn = [[BFPaperButton alloc] init];
@@ -54,7 +54,7 @@
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(-80 + offsetY);
             make.left.mas_equalTo(offsetX);
-            make.width.mas_equalTo((ScreenSize.width - 40)/4);
+            make.width.mas_equalTo((SelfFrameSizeWidth - 40)/4);
             make.height.mas_equalTo(20);
         }];
         [btn setTitle:nameArray[i] forState:UIControlStateNormal];

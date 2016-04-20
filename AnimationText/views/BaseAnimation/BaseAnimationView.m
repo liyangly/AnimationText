@@ -31,7 +31,7 @@
 
 - (void)initSubViews {
     
-    demoview = [[UIView alloc] initWithFrame:CGRectMake(ScreenSize.width/2 - 50, ScreenSize.height/2 - 100-44, 100, 100)];
+    demoview = [[UIView alloc] initWithFrame:CGRectMake(SelfFrameSizeWidth/2 - 50, SelfFrameSizeHeight/2 - 100-44, 100, 100)];
     [self addSubview:demoview];
     demoview.backgroundColor = [UIColor themeColor];
     
@@ -42,7 +42,7 @@
         float offsetY;
         if (i < 4) {
             offsetY = -40;
-            offsetX = ((ScreenSize.width-40)/4 + 10)*i + 5;
+            offsetX = ((SelfFrameSizeWidth-40)/4 + 10)*i + 5;
         }else {
             offsetY = -10;
             offsetX = 5;
@@ -52,7 +52,7 @@
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(self.mas_bottom).offset(offsetY);
             make.left.mas_equalTo(self.mas_left).offset(offsetX);
-            make.width.mas_equalTo((ScreenSize.width-30)/4);
+            make.width.mas_equalTo((SelfFrameSizeWidth-30)/4);
             make.height.mas_equalTo(20);
         }];
         [btn setTitle:titleArray[i] forState:UIControlStateNormal];
@@ -92,8 +92,8 @@
 - (void)positionAnimation {
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-    animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0, ScreenSize.height/2 - 100)];
-    animation.toValue = [NSValue valueWithCGPoint:CGPointMake(ScreenSize.width, ScreenSize.height/2 - 100)];
+    animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0, SelfFrameSizeHeight/2 - 100)];
+    animation.toValue = [NSValue valueWithCGPoint:CGPointMake(SelfFrameSizeWidth, SelfFrameSizeHeight/2 - 100)];
     animation.duration = 1.0;
     
     [demoview.layer addAnimation:animation forKey:@"positionAnimation"];

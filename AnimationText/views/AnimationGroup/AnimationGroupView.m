@@ -31,7 +31,7 @@
 
 - (void)initSubViews {
     
-    demoView = [[UIView alloc] initWithFrame:CGRectMake(ScreenSize.width/2 - 50, ScreenSize.height/2 - 144, 100, 100)];
+    demoView = [[UIView alloc] initWithFrame:CGRectMake(SelfFrameSizeWidth/2 - 50, SelfFrameSizeHeight/2 - 144, 100, 100)];
     [self addSubview:demoView];
     demoView.backgroundColor = [UIColor themeColor];
     

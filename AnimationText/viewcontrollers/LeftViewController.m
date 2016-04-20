@@ -11,6 +11,7 @@
 #import "AnimationTextAPI.h"
 #import "LeftTableView.h"
 #import "HomePageViewController.h"
+#import "BaseCenterViewController.h"
 
 #import "UIColor+Util.h"
 
@@ -55,8 +56,11 @@
 
 - (void)funcCenterItem:(NSIndexPath *)indexpath {
     
-//    SWRevealViewController *revealVC = self.revealViewController;
-//    [revealVC pushFrontViewController:[HomePageViewController new] animated:YES];
+    SWRevealViewController *revealVC = self.revealViewController;
+    BaseCenterViewController *baseVC =  [[BaseCenterViewController alloc] init];
+    baseVC.itemindex = indexpath.row;
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:baseVC];
+    [revealVC pushFrontViewController:navVC animated:YES];
 }
 
 @end

@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+
 @interface BaseCenterViewController : ViewController
+
+@property (nonatomic,assign) NSUInteger itemindex;
 
 @end

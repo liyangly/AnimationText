@@ -10,10 +10,31 @@
 
 #import "AnimationTextAPI.h"
 
-#import "HomePageViewController.h"
+
+#import "BaseSwipeView.h"
+#import "BaseAnimationView.h"
+#import "KeyframeAnimationView.h"
+#import "AnimationGroupView.h"
+#import "TransitionView.h"
+#import "ComprehensiveView.h"
+
+#import "UIColor+Util.h"
 
 #import "Masonry.h"
 #import "SWRevealViewController.h"
+
+@interface BaseCenterViewController () {
+    
+    BaseSwipeView *myswipeview;
+    BaseAnimationView *baseanimationview;
+    KeyframeAnimationView *keyframeanimationview;
+    AnimationGroupView *animationgroupview;
+    TransitionView *transitionview;
+    ComprehensiveView *comprehensiveView;
+    
+}
+
+@end
 
 @implementation BaseCenterViewController
 
@@ -31,21 +52,36 @@
     SWRevealViewController *swrevealVC = self.revealViewController;
     [self.view addGestureRecognizer:swrevealVC.panGestureRecognizer];
     
-    UIButton *button = [[UIButton alloc] init];
-    [self.view addSubview:button];
-    [button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view.mas_top).offset(100);
-        make.left.mas_equalTo(self.view.mas_left).offset(10);
-        make.right.mas_equalTo(self.view.mas_right).offset(-10);
-        make.height.mas_equalTo(40);
-    }];
-    button.backgroundColor = [UIColor yellowColor];
-    [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    float swipewidth = self.view.bounds.size.width - 40;
+    float swipeheight = self.view.bounds.size.height-64-20;
+    float swipebarheight = 44;
+    myswipeview = [[BaseSwipeView alloc] initWithFrame:CGRectMake(20, 64, swipewidth, swipeheight)];
+    baseanimationview = [[BaseAnimationView alloc] initWithFrame:CGRectMake(0, 0, swipewidth, swipeheight - swipebarheight)];
+    keyframeanimationview = [[KeyframeAnimationView alloc] initWithFrame:CGRectMake(0, 0, swipewidth, swipeheight - swipebarheight)];
+    animationgroupview = [[AnimationGroupView alloc] initWithFrame:CGRectMake(0, 0, swipewidth, swipeheight - swipebarheight)];
+    transitionview = [[TransitionView alloc] initWithFrame:CGRectMake(0, 0, swipewidth, swipeheight - swipebarheight)];
+    comprehensiveView = [[ComprehensiveView alloc] initWithFrame:CGRectMake(0, 0, swipewidth, swipeheight - swipebarheight)];
+    NSArray *nameArray = @[@"基础动画",
+                           @"关键帧动画",
+                           @"组动画",
+                           @"过渡动画",
+                           @"综合动画"];
+    NSArray *viewArray = @[baseanimationview,
+                           keyframeanimationview,
+                           animationgroupview,
+                           transitionview,
+                           comprehensiveView];
+    [myswipeview setItemNames:nameArray andView:viewArray];
+    [self.view addSubview:myswipeview];
+    
+    if (_itemindex) {
+        
+        myswipeview.swipeBar.selectedSegmentIndex = _itemindex;
+        myswipeview.swipeView.currentItemIndex = _itemindex;
+        [myswipeview.swipeBar setSelectedSegmentIndex:myswipeview.swipeView.currentPage animated:YES];
+    }
     
 }
 
-- (void)click:(UIButton *)sender {
-    [self.navigationController pushViewController:[HomePageViewController new] animated:YES];
-}
 
 @end

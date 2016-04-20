@@ -10,5 +10,7 @@
 #define AnimationTextAPI_h
 
 #define ScreenSize ([UIScreen mainScreen].bounds.size)
+#define SelfFrameSizeWidth  (self.frame.size.width)
+#define SelfFrameSizeHeight  (self.frame.size.height)
 
 #endif /* AnimationTextAPI_h */

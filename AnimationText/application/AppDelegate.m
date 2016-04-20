@@ -13,7 +13,7 @@
 #import "HomePageViewController.h"
 #import "LeftViewController.h"
 #import "RightViewController.h"
-#import "BaseViewController.h"
+#import "BaseCenterViewController.h"
 
 #import "SWRevealViewController.h"
 
@@ -82,7 +82,7 @@
 - (void)setRootViewController2 {
     
     LeftViewController *leftVC = [[LeftViewController alloc] init];
-    BaseViewController *centerVC = [[BaseViewController alloc] init];
+    BaseCenterViewController *centerVC = [[BaseCenterViewController alloc] init];
     RightViewController *rightVC = [[RightViewController alloc] init];
     
     UINavigationController *navcenterVC = [[UINavigationController alloc] initWithRootViewController:centerVC];

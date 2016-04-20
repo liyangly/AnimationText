@@ -6,14 +6,16 @@
 //  Copyright © 2016年 liyang. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseCenterViewController.h"
 
 #import "AnimationTextAPI.h"
 
-#import "SWRevealViewController.h"
 #import "HomePageViewController.h"
 
-@implementation BaseViewController
+#import "Masonry.h"
+#import "SWRevealViewController.h"
+
+@implementation BaseCenterViewController
 
 - (void)viewDidLoad {
     
@@ -29,8 +31,14 @@
     SWRevealViewController *swrevealVC = self.revealViewController;
     [self.view addGestureRecognizer:swrevealVC.panGestureRecognizer];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 40)];
+    UIButton *button = [[UIButton alloc] init];
     [self.view addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top).offset(100);
+        make.left.mas_equalTo(self.view.mas_left).offset(10);
+        make.right.mas_equalTo(self.view.mas_right).offset(-10);
+        make.height.mas_equalTo(40);
+    }];
     button.backgroundColor = [UIColor yellowColor];
     [button addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     

@@ -42,7 +42,7 @@
 		B63FC64E1CBCF5FC0012BC85 /* NailMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FC64D1CBCF5FC0012BC85 /* NailMenuView.m */; };
 		B63FC6511CBCF6180012BC85 /* PathMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = B63FC6501CBCF6180012BC85 /* PathMenuView.m */; };
 		B65781741CC5BE0F00FFC933 /* ComprehensiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B65781731CC5BE0F00FFC933 /* ComprehensiveView.m */; };
-		B681EA821CC626E5002D65BC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B681EA811CC626E5002D65BC /* BaseViewController.m */; };
+		B681EA821CC626E5002D65BC /* BaseCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B681EA811CC626E5002D65BC /* BaseCenterViewController.m */; };
 		B681EA851CC62B79002D65BC /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B681EA841CC62B79002D65BC /* LeftViewController.m */; };
 		B681EA881CC62B8F002D65BC /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B681EA871CC62B8F002D65BC /* RightViewController.m */; };
 		B69574061CBCCE9F00019106 /* BaseAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B69574051CBCCE9F00019106 /* BaseAnimationView.m */; };
@@ -124,8 +124,8 @@
 		B63FC6501CBCF6180012BC85 /* PathMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathMenuView.m; sourceTree = "<group>"; };
 		B65781721CC5BE0F00FFC933 /* ComprehensiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComprehensiveView.h; sourceTree = "<group>"; };
 		B65781731CC5BE0F00FFC933 /* ComprehensiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComprehensiveView.m; sourceTree = "<group>"; };
-		B681EA801CC626E5002D65BC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		B681EA811CC626E5002D65BC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B681EA801CC626E5002D65BC /* BaseCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCenterViewController.h; sourceTree = "<group>"; };
+		B681EA811CC626E5002D65BC /* BaseCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCenterViewController.m; sourceTree = "<group>"; };
 		B681EA831CC62B79002D65BC /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		B681EA841CC62B79002D65BC /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		B681EA861CC62B8F002D65BC /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
@@ -257,8 +257,8 @@
 			children = (
 				B62C6DAA1CBCA272009FFA0B /* HomePageViewController.h */,
 				B62C6DAB1CBCA272009FFA0B /* HomePageViewController.m */,
-				B681EA801CC626E5002D65BC /* BaseViewController.h */,
-				B681EA811CC626E5002D65BC /* BaseViewController.m */,
+				B681EA801CC626E5002D65BC /* BaseCenterViewController.h */,
+				B681EA811CC626E5002D65BC /* BaseCenterViewController.m */,
 				B681EA831CC62B79002D65BC /* LeftViewController.h */,
 				B681EA841CC62B79002D65BC /* LeftViewController.m */,
 				B681EA861CC62B8F002D65BC /* RightViewController.h */,
@@ -643,7 +643,7 @@
 			files = (
 				B6C772471CC6389C008EF47F /* LeftCell.m in Sources */,
 				B62C6DA11CBC99CE009FFA0B /* AppDelegate.m in Sources */,
-				B681EA821CC626E5002D65BC /* BaseViewController.m in Sources */,
+				B681EA821CC626E5002D65BC /* BaseCenterViewController.m in Sources */,
 				B69574091CBCCEB400019106 /* TransitionView.m in Sources */,
 				B62C6DB51CBCA4FD009FFA0B /* UIColor+Util.m in Sources */,
 				B69574061CBCCE9F00019106 /* BaseAnimationView.m in Sources */,

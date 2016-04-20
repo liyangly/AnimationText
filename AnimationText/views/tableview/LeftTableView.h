@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftTableView : UITableView
+@interface LeftTableView : UITableView<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic,strong) NSMutableArray *dataArr;
+
+@property (nonatomic,copy) void (^leftRowSelect)(NSIndexPath *);
 
 @end
